@@ -14,7 +14,7 @@ export default defineConfig({
       dark: '/logo-white.png'
     },
 
-    siteTitle: 'Docs (Next)',
+    siteTitle: 'Docs',
 
     // https://vitepress.dev/reference/frontmatter-config#outline
     outline: {
@@ -53,7 +53,7 @@ export default defineConfig({
             text: "Generic",
             items: [
               { text: 'Prerequisites', link: '/running-pixelfed/generic/prerequisites' },
-              { text: 'Installation', link: '/running-pixelfed/generic//installation' },
+              { text: 'Installation', link: '/running-pixelfed/generic/installation' },
             ]
           },
           { text: 'Configuration', link: '/running-pixelfed/configuration' },
