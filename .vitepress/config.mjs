@@ -1,13 +1,13 @@
 import { defineConfig } from 'vitepress'
 
-const { BASE: base = '/docs-next/' } = process.env
+const { BASE: base = '/docs/' } = process.env
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'en-US',
-  title: "Pixelfed Docs",
+  title: "Pixelfed Glitch Docs",
   base: base,
-  description: "The official Pixelfed documentation",
+  description: "The Pixelfed Glitch documentation",
   themeConfig: {
     logo: {
       light: '/logo-black.png',
@@ -23,8 +23,8 @@ export default defineConfig({
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'pixelfed.org', link: 'https://pixelfed.org' },
-      { text: 'Support', link: 'https://github.com/pixelfed/pixelfed/discussions' },
+      { text: 'pixelfed', link: 'https://pixelfed-glitch.github.io' },
+      { text: 'Support', link: 'https://github.com/pixelfed-glitch/pixelfed/discussions' },
     ],
 
     search: {

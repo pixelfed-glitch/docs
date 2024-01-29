@@ -1,6 +1,6 @@
 # Pixelfed + Docker customization
 
-::: tip If anything is confusing, unclear, missing, or maybe even wrong on this page, then *please* let us know [by submitting a bug report](https://github.com/pixelfed/pixelfed/issues/new) :heart:
+::: tip If anything is confusing, unclear, missing, or maybe even wrong on this page, then *please* let us know [by submitting a bug report](https://github.com/pixelfed-glitch/pixelfed/issues/new) :heart:
 :::
 
 ::: tip Most, if not all, configuration options for both Pixelfed and Docker is included and documented in the `.env.docker` (or `.env` file once you copied it during the installation)

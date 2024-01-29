@@ -1,6 +1,6 @@
 # Pixelfed + Docker installtion
 
-::: tip If anything is confusing, unclear, missing, or maybe even wrong on this page, then *please* let us know [by submitting a bug report](https://github.com/pixelfed/pixelfed/issues/new) :heart:
+::: tip If anything is confusing, unclear, missing, or maybe even wrong on this page, then *please* let us know [by submitting a bug report](https://github.com/pixelfed-glitch/pixelfed/issues/new) :heart:
 :::
 
 Connect via SSH to your server and decide where you want to install Pixelfed.
@@ -22,7 +22,7 @@ mkdir -p /data
 ### Clone the Pixelfed project
 
 ```bash
-git clone https://github.com/pixelfed/pixelfed.git /data/pixelfed
+git clone https://github.com/pixelfed-glitch/pixelfed.git /data/pixelfed
 ```
 
 ### Change directory
@@ -52,15 +52,15 @@ The minimum required settings you **must** change is:
 * (required) `APP_DOMAIN`, which is the hostname you plan to run your Pixelfed server on (e.g., `pixelfed.social`) - must **not** include `http://` or a trailing slash (`/`)!
 * (required) `DB_PASSWORD`, which is the database password; you can use a service like [pwgen.io](https://pwgen.io/en/) to generate a secure one.
 * (optional) `ENFORCE_EMAIL_VERIFICATION` should be set to `"false"` if you don't plan to send e-mails.
-* (optional) `MAIL_DRIVER` and related `MAIL_*` settings if you plan to use an [E-mail/SMTP provider](prerequisites.md#smtp-provider-optional) - See [E-mail variables documentation](https://docs.pixelfed.org/running-pixelfed/installation/#email-variables).
+* (optional) `MAIL_DRIVER` and related `MAIL_*` settings if you plan to use an [E-mail/SMTP provider](prerequisites.md#smtp-provider-optional) - See [E-mail variables documentation](installation.md#email-variables).
 * (optional) `PF_ENABLE_CLOUD` / `FILESYSTEM_CLOUD` if you plan to use an [Object Storage provider](prerequisites.md#object-storage-optional).
 
 See the [`Configure environment variables`](https://docs.pixelfed.org/running-pixelfed/installation/#app-variables) documentation for details!
 
 You need to mainly focus on the following sections.
 
-* [App variables](https://docs.pixelfed.org/running-pixelfed/installation/#app-variables)
-* [Email variables](https://docs.pixelfed.org/running-pixelfed/installation/#email-variables)
+* [App variables](installation.md#app-variables)
+* [Email variables](installation.md#email-variables)
 
 You can skip the following sections since they are already configured/automated for you:
 
@@ -94,5 +94,5 @@ You made it to the end of the installation tutorial and *hopefully* you have ful
 
 We recommend your next steps is to [check out how to customize your Pixelfed instance](customize.md)
 
-::: tip If anything was confusing, unclear, or maybe even wrong on this page, then *please* let us know [by submitting a bug report](https://github.com/pixelfed/pixelfed/issues/new) :heart:
+::: tip If anything was confusing, unclear, or maybe even wrong on this page, then *please* let us know [by submitting a bug report](https://github.com/pixelfed-glitch/pixelfed/issues/new) :heart:
 :::

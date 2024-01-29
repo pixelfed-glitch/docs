@@ -20,7 +20,7 @@ Pixelfed Beta currently uses the `dev` branch for deployable code. When v1.0 is 
 
 ```shellscript
 cd /usr/share/webapps # or wherever you choose to install web applications
-git clone -b dev https://github.com/pixelfed/pixelfed.git pixelfed # checkout dev branch into "pixelfed" folder
+git clone -b dev https://github.com/pixelfed-glitch/pixelfed.git pixelfed # checkout dev branch into "pixelfed" folder
 ```
 
 ### Set correct permissions
