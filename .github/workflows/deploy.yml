@@ -4,6 +4,9 @@ name: Deploy VitePress site to Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches:    
+      - main
 
   pull_request:
     types:
