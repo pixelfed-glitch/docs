@@ -14,7 +14,7 @@ If you are unsure of which runtime to choose, please use the [Apache runtime](#a
 ## Apache  <Badge type="tip" text="Recommended" />
 
 ::: tip RECOMMENDED
-This is the default *and* recommended runtime for almost all single-server Pixelfed instances, as it has fewer moving parts, simplified operational model, and strikes a good balance between performance, features, and convenience.
+This is the default *and* recommended runtime by the official Pixelfed project. It is also the most stable, as it has fewer moving parts, simplified operational model, and strikes a good balance between performance, features, and convenience.
 :::
 
 Building a custom Pixelfed Docker image using `Apache` + `mod_php` can be achieved the following way.
@@ -53,13 +53,7 @@ services:
       target: apache-runtime
 ```
 
-## Nginx + FPM <Badge type="warning" text="Advanced" />
-
-:::info ADVANCED USAGE
-Nginx + FPM has more moving parts than the default (and recommended) [Apache runtime](#apache).
-
-Only select this runtime if you have valid *technical* reasons to do so.
-:::
+## Nginx + FPM
 
 Building a custom Pixelfed Docker image using nginx + FPM can be achieved the following way.
 
