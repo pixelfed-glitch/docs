@@ -1,4 +1,4 @@
-Pixelfed Glitch Docs
+# Pixelfed Glitch Docs
 Getting started
 
 To get started, install node (version 18+) requirements and run the VitePress server
@@ -6,7 +6,7 @@ To get started, install node (version 18+) requirements and run the VitePress se
 npm i
 npm run docs:dev
 
-Resources
+# Resources
 
     VitePress Getting Started
     VitePress Markdown extensions
