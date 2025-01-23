@@ -3,18 +3,21 @@
 layout: home
 
 hero:
-  name: "Pixelfed Docs"
+  name: "Pixelfed Glitch Docs"
   text: ""
-  tagline: "The official Pixelfed documentation"
+  tagline: "The Pixelfed Glitch documentation"
   actions:
     - theme: brand
-      text: Introduction
-      link: /project/introduction
-    - theme: alt
-      text: Installation Guide
-      link: /running-pixelfed/prerequisites
+      text: Getting Started
+      link: /running-pixelfed/
     - theme: alt
       text: ActivityPub Documentation
       link: /spec/ActivityPub.html
+    - theme: alt
+      text: Latest Pixelfed Glitch Docs
+      link: https://pixelfed-glitch.github.io/docs/
+    - theme: alt
+      text: Pixelfed Official Docs
+      link: https://docs.pixelfed.org
 ---
 
