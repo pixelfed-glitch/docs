@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'en-US',
   title: "Pixelfed Glitch Docs",
-  base: "/",
+  base: "/docs/",
   description: "The Pixelfed Glitch documentation",
   themeConfig: {
     logo: {
