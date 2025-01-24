@@ -42,9 +42,11 @@ export default defineConfig({
       },
       {
         text: 'Running Pixelfed',
+        link: '/running-pixelfed/index',
         items: [
           {
             text: "Docker",
+            link: '/running-pixelfed/docker/prerequisites',
             items: [
               { text: "Prerequisites", link: "/running-pixelfed/docker/prerequisites" },
               { text: "Installation", link: "/running-pixelfed/docker/installation" },
@@ -55,15 +57,16 @@ export default defineConfig({
             ],
           },
           {
-            text: "Generic",
+            text: "Native",
+            link: '/running-pixelfed/native/prerequisites',
             items: [
-              { text: 'Prerequisites', link: '/running-pixelfed/prerequisites' },
-              { text: 'Installation', link: '/running-pixelfed/installation' },
-              { text: 'Configuration', link: '/running-pixelfed/configuration' },
-              { text: 'Administration', link: '/running-pixelfed/administration' },
-              { text: 'Push Notifications', link: '/running-pixelfed/push-notifications' },
-              { text: 'CLI Cheatsheet', link: '/running-pixelfed/cli-cheatsheet' },
-              { text: 'Troubleshooting', link: '/running-pixelfed/troubleshooting' }
+              { text: 'Prerequisites', link: '/running-pixelfed/native/prerequisites' },
+              { text: 'Installation', link: '/running-pixelfed/native/installation' },
+              { text: 'Configuration', link: '/running-pixelfed/native/configuration' },
+              { text: 'Administration', link: '/running-pixelfed/native/administration' },
+              { text: 'Push Notifications', link: '/running-pixelfed/native/push-notifications' },
+              { text: 'CLI Cheatsheet', link: '/running-pixelfed/native/cli-cheatsheet' },
+              { text: 'Troubleshooting', link: '/running-pixelfed/native/troubleshooting' }
         ],
       },
     ]

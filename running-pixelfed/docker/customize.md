@@ -117,7 +117,7 @@ The variable is a space-delimited list shown below and accepts both relative and
 The script stores `lock` files in the `storage/docker/once` folder to ensure that these tasks are only run once, so for new Pixelfed servers, you do not need to disable this behavior!
 :::
 
-The Docker container will by default try to run the required [One-time setup tasks](../generic/installation.md#one-time-setup-tasks) for you on startup.
+The Docker container will by default try to run the required [One-time setup tasks](../native/installation.md#one-time-setup-tasks) for you on startup.
 
 If your Pixelfed server already have run these tasks, you must disable this by setting `DOCKER_APP_RUN_ONE_TIME_SETUP_TASKS=0` in your `.env` file.
 

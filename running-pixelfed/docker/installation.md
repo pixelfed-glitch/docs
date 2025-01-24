@@ -1,4 +1,4 @@
-# Pixelfed + Docker installtion
+# Pixelfed + Docker installation
 
 ::: tip If anything is confusing, unclear, missing, or maybe even wrong on this page, then *please* let us know [by submitting a bug report](https://github.com/pixelfed-glitch/pixelfed/issues/new) :heart:
 :::
@@ -52,15 +52,15 @@ The minimum required settings you **must** change is:
 * (required) `APP_DOMAIN`, which is the hostname you plan to run your Pixelfed server on (e.g., `pixelfed.social`) - must **not** include `http://` or a trailing slash (`/`)!
 * (required) `DB_PASSWORD`, which is the database password; you can use a service like [pwgen.io](https://pwgen.io/en/) to generate a secure one.
 * (optional) `ENFORCE_EMAIL_VERIFICATION` should be set to `"false"` if you don't plan to send e-mails.
-* (optional) `MAIL_DRIVER` and related `MAIL_*` settings if you plan to use an [E-mail/SMTP provider](prerequisites.md#smtp-provider-optional) - See [E-mail variables documentation](/running-pixelfed/generic/installation.md#email-variables).
+* (optional) `MAIL_DRIVER` and related `MAIL_*` settings if you plan to use an [E-mail/SMTP provider](prerequisites.md#smtp-provider-optional) - See [E-mail variables documentation](/running-pixelfed/native/installation.md#email-variables).
 * (optional) `PF_ENABLE_CLOUD` / `FILESYSTEM_CLOUD` if you plan to use an [Object Storage provider](prerequisites.md#object-storage-optional).
 
 See the [`Configure environment variables`](https://docs.pixelfed.org/running-pixelfed/installation/#app-variables) documentation for details!
 
 You need to mainly focus on the following sections.
 
-* [App variables](/running-pixelfed/generic/installation.md#app-variables)
-* [Email variables](/running-pixelfed/generic/installation.md#email-variables)
+* [App variables](/running-pixelfed/native/installation.md#app-variables)
+* [Email variables](/running-pixelfed/native/installation.md#email-variables)
 
 You can skip the following sections since they are already configured/automated for you:
 

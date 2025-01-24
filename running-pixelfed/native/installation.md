@@ -1,5 +1,5 @@
 ---
-title = "Generic installation guide"
+title = "Native installation guide"
 summary = "How to set up everything you need to run your own Pixelfed instance."
 weight = 20
 [menu]
