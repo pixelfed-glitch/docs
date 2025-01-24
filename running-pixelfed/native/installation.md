@@ -128,7 +128,7 @@ To setup a mailer for production deployments, you have several options for suppo
 
 Set up your SMTP server. Or, create an account with [Mailtrap](https://mailtrap.io).
 
-- Set `MAIL_DRIVER` to `smtp`
+- Set `MAIL_MAILER` (previously named `MAIL_DRIVER`) to `smtp`
 - Set `MAIL_HOST` to your host, e.g. `smtp.mailtrap.io`
 - Set `MAIL_PORT` to your port, e.g. `587` or `2525`
 - Set `MAIL_USERNAME` and `MAIL_PASSWORD` if your SMTP server requires authorization. (Mailtrap.io does not.)
@@ -137,7 +137,7 @@ Set up your SMTP server. Or, create an account with [Mailtrap](https://mailtrap.
 
 Create an account with [Mailgun](https://mailgun.com/).
 
-- Set `MAIL_DRIVER` to `mailgun`
+- Set `MAIL_MAILER` (previously named `MAIL_DRIVER`) to `mailgun`
 - Set `MAIL_HOST` to `smtp.mailgun.org`
 - Set `MAIL_PORT` to `587`
 - Set `MAIL_USERNAME` to your Mailgun domain
@@ -173,14 +173,14 @@ Next, install Guzzle and set the `driver` option in your `config/mail.php` confi
 
 Create an account with Amazon AWS.
 
-- Set `MAIL_DRIVER` to `ses`
+- Set `MAIL_MAILER` (previously named `MAIL_DRIVER`) to `ses`
 - Set `SES_KEY`
 - Set `SES_SECRET`
 - Set `SES_REGION` (if not using the default of `us-east-1`)
 
 #### sendmail
 
-- Set `MAIL_DRIVER` to `sendmail`
+- Set `MAIL_MAILER` (previously named `MAIL_DRIVER`) to `sendmail`
 
 ### Additional variables
 
