@@ -50,7 +50,8 @@ export default defineConfig({
             items: [
               { text: "Prerequisites", link: "/running-pixelfed/docker/prerequisites" },
               { text: "Installation", link: "/running-pixelfed/docker/installation" },
-              { text: "Customize", link: "/running-pixelfed/docker/customize" },
+              { text: "Configuration", link: "/running-pixelfed/native/configuration#docker-settings" },
+              { text: "Build Settings", link: "/running-pixelfed/docker/build-settings" },
               { text: "FAQ", link: "/running-pixelfed/docker/faq" },
               { text: "Runtimes", link: "/running-pixelfed/docker/runtimes" },
               { text: "Migrate to v2", link: "/running-pixelfed/docker/migrate/v2.0" },
