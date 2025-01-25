@@ -49,12 +49,10 @@ export default defineConfig({
             items: [
               { text: "Prerequisites", link: "/running-pixelfed/docker/prerequisites" },
               { text: "Installation", link: "/running-pixelfed/docker/installation" },
-              { text: "Configuration", link: "/running-pixelfed/native/configuration#docker-settings" },
               { text: "Build Settings", link: "/running-pixelfed/docker/build-settings" },
               { text: "FAQ", link: "/running-pixelfed/docker/faq" },
-              { text: "Runtimes", link: "/running-pixelfed/docker/runtimes" },
-              { text: "Migrate to v2", link: "/running-pixelfed/docker/migrate/v2.0" },
-            ],
+              { text: "Runtimes", link: "/running-pixelfed/docker/runtimes" }
+                        ],
           },
           {
             text: "Native",
@@ -62,15 +60,20 @@ export default defineConfig({
             items: [
               { text: 'Prerequisites', link: '/running-pixelfed/native/prerequisites' },
               { text: 'Installation', link: '/running-pixelfed/native/installation' },
-              { text: 'Configuration', link: '/running-pixelfed/native/configuration' },
               { text: 'Administration', link: '/running-pixelfed/native/administration' },
               { text: 'Push Notifications', link: '/running-pixelfed/native/push-notifications' },
               { text: 'CLI Cheatsheet', link: '/running-pixelfed/native/cli-cheatsheet' },
               { text: 'Troubleshooting', link: '/running-pixelfed/native/troubleshooting' }
         ],
-      },
+      }
     ]
   },
+  {
+    text: "",
+    items: [
+      { text: 'Configuration', link: '/running-pixelfed/native/configuration' }
+],
+},
       {
         text: 'Spec Compliance',
         items: [

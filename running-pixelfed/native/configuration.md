@@ -28,20 +28,40 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | APP_NAME                            | ""| The name/title for your site. |
 | APP_DOMAIN                          | ""| The domain of your server, without `https://` |
 | APP_URL                             | "https://localhost"           | The url of your server, used for generating urls. Should start with "https://" |
-| FORCE_HTTPS_URLS | true | Force https url generation | Boolean |
-| ADMIN_DOMAIN                        | "${APP_DOMAIN}"                   | Application domains used for routing for admin. |
-| APP_ENV                             | "production"                      | The app environment, keep it set to "production". |
-| APP_DEBUG                           | "false"                           | Enable detailed error messages in debug mode. |
-| ENABLE_CONFIG_CACHE                | "true"                            | Enable or disable configuration caching. |
-| OPEN_REGISTRATION                   | "true"                            | Enable new local account registrations. |
-| ENFORCE_EMAIL_VERIFICATION         | "true"                            | Require email verification before user actions. |
-| PF_MAX_USERS                       | "1000"                            | Maximum number of user accounts allowed. |
-| PF_ENFORCE_MAX_USERS               | "true"                            | Enforce the maximum number of user accounts. |
-| OAUTH_ENABLED                       | "true"                           | Enable oAuth support, required for mobile/3rd party apps |
 | APP_TIMEZONE                        | "UTC"                             | Application timezone. |
 | APP_LOCALE                          | "en"                              | Application locale. |
 | APP_FALLBACK_LOCALE                 | "en"                              | Fallback locale when the current one is unavailable. |
+| APP_ENV                             | "production"                      | The app environment, keep it set to "production". |
+| APP_DEBUG                           | "false"                           | Enable detailed error messages in debug mode. |
+| FORCE_HTTPS_URLS | true | Force https url generation | Boolean |
+| ADMIN_DOMAIN                        | "${APP_DOMAIN}"                   | Application domains used for routing for admin. |
+| ENABLE_CONFIG_CACHE                | "true"                            | Enable or disable configuration caching. |
+| OPEN_REGISTRATION                   | "true"                            | Enable new local account registrations. |
+| ENFORCE_EMAIL_VERIFICATION         | "true"                            | Require email verification before user actions. |
+| INSTANCE_DESCRIPTION                | "Pixelfed Glitch - Photo sharing for everyone" | Instance description. |
+| TRUST_PROXIES                       | "*"                               | List of trusted proxy IP addresses. |
+| RESTRICT_HTML_TYPES                 | "true"                            | Restrict allowed HTML types. |
+| PASSPORT_PRIVATE_KEY                | ""| Passport private key for secure access tokens. |
+| PASSPORT_PUBLIC_KEY                 | ""| Passport public key for secure access tokens. |
+
+### Media Settings
+| .env key      | Default |  Description |
+| ------------- | :-----------: | :----: |
+| PF_OPTIMIZE_IMAGES                  | "true"                            | Enable image optimization on upload. |
+| IMAGE_QUALITY                       | "80"                              | Image optimization quality (1-100). |
+| PF_OPTIMIZE_VIDEOS                  | "true"                            | Enable video optimization on upload. |
+| IMAGE_DRIVER                        | "gd"                              | Image processing driver: gd or imagick. |
+| MEDIA_EXIF_DATABASE                 | "false"                           | Enable EXIF database for media. |
+
+
+### User Limits
+| .env key      | Default |  Description |
+| ------------- | :-----------: | :----: |
+| PF_MAX_USERS                       | "1000"                            | Maximum number of user accounts allowed. |
+| PF_ENFORCE_MAX_USERS               | "true"                            | Enforce the maximum number of user accounts. |
 | LIMIT_ACCOUNT_SIZE                  | "true"                            | Limit the size of user accounts. |
+| ACCOUNT_DELETION                    | "true"                            | Enable account deletion. |
+| ACCOUNT_DELETE_AFTER                | "false"                           | Delay account deletion or delete immediately. |
 | MAX_ACCOUNT_SIZE                    | "1000000"                         | Maximum account size in kB. |
 | MAX_PHOTO_SIZE                      | "15000"                           | Maximum photo size in kB. |
 | MAX_ALBUM_LENGTH                    | "4"                               | Maximum number of photos per post. |
@@ -50,12 +70,15 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | MAX_BIO_LENGTH                      | "125"                             | Maximum bio length for user profiles. |
 | MAX_NAME_LENGTH                     | "30"                              | Maximum length for user names. |
 | MIN_PASSWORD_LENGTH | 8 | The min password length | Integer |
-| PF_OPTIMIZE_IMAGES                  | "true"                            | Enable image optimization on upload. |
-| IMAGE_QUALITY                       | "80"                              | Image optimization quality (1-100). |
-| PF_OPTIMIZE_VIDEOS                  | "true"                            | Enable video optimization on upload. |
-| ACCOUNT_DELETION                    | "true"                            | Enable account deletion. |
-| ACCOUNT_DELETE_AFTER                | "false"                           | Delay account deletion or delete immediately. |
-| INSTANCE_DESCRIPTION                | "Pixelfed Glitch - Photo sharing for everyone" | Instance description. |
+| PF_MAX_USER_BLOCKS | 50 | The max number of user blocks per account | Integer |
+| PF_MAX_USER_MUTES | 50 | The max number of user mutes per account | Integer |
+| PF_MAX_DOMAIN_BLOCKS | 50 | The max number of domain blocks per account | Integer |
+| PF_MAX_COLLECTION_LENGTH | 100 | Max collection post limit | Integer |
+| BANNED_USERNAMES                    | ""| List of banned usernames. |
+
+### Feature Settings
+| .env key      | Default |  Description |
+| ------------- | :-----------: | :----: |
 | INSTANCE_LANDING_SHOW_DIRECTORY | true | Enable the profile directory on the landing page | Boolean |
 | INSTANCE_LANDING_SHOW_EXPLORE | true | Enable the popular post explore on the landing page | Boolean |
 | INSTANCE_PUBLIC_HASHTAGS            | "false"                           | Allow anonymous access to hashtag feeds. |
@@ -63,39 +86,15 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | INSTANCE_CONTACT_EMAIL              | "__CHANGE_ME__"                   | The public contact email address for the instance. |
 | INSTANCE_PUBLIC_LOCAL_TIMELINE      | "false"                           | Enable public local timeline. |
 | INSTANCE_DISCOVER_PUBLIC | false | Enable public access to the Discover feature | Boolean |
-| INSTANCE_REPORTS_EMAIL_ENABLED      | "false"                           | Enable email reports for auto-spam detections. |
-| INSTANCE_REPORTS_EMAIL_ADDRESSES    | "your@email.example"             | Email addresses for spam detection reports. |
-| INSTANCE_REPORTS_EMAIL_AUTOSPAM     | "false"                           | Send email reports on auto-spam. |
 | INSTANCE_PROFILE_EMBEDS | true | Enable the profile embed feature | Boolean |
 | INSTANCE_POST_EMBEDS | true | Enable the post embed feature | Boolean |
 | INSTANCE_SHOW_PEERS | false | Enable the api/v1/peers API endpoint | Boolean |
-| BANNED_USERNAMES                    | ""| List of banned usernames. |
 | STORIES_ENABLED                      | "false"                           | Enable the stories feature. |
 | RESTRICTED_INSTANCE                 | "false"                           | Enable restricted instance. |
 | PF_HIDE_NSFW_ON_PUBLIC_FEEDS | false | Hide sensitive posts from public/network feeds | Boolean |
 | PF_ADMIN_INVITES_ENABLED | true | Enable the Admin Invites feature | Boolean |
-| PF_MAX_USER_BLOCKS | 50 | The max number of user blocks per account | Integer |
-| PF_MAX_USER_MUTES | 50 | The max number of user mutes per account | Integer |
-| PF_MAX_DOMAIN_BLOCKS | 50 | The max number of domain blocks per account | Integer |
-| PF_MAX_COLLECTION_LENGTH | 100 | Max collection post limit | Integer |
-| PF_IMPORT_FROM_INSTAGRAM            | "true"                            | Allow importing posts from Instagram. |
-| PF_IMPORT_IG_MAX_POSTS              | "1000"                            | Maximum number of posts to import from Instagram. |
-| PF_IMPORT_IG_MAX_ATTEMPTS           | "-1"                              | Maximum number of Instagram import attempts. |
-| PF_IMPORT_IG_ALLOW_VIDEO_POSTS      | "true"                            | Allow importing video posts from Instagram. |
-| PF_IMPORT_IG_PERM_ADMIN_ONLY        | "false"                           | Limit Instagram imports to admin accounts only. |
-| PF_IMPORT_IG_PERM_ADMIN_FOLLOWS_ONLY | "false"                         | Limit Instagram imports to admin-followed accounts. |
-| PF_IMPORT_IG_PERM_MIN_ACCOUNT_AGE   | "1"                               | Minimum Instagram account age to allow imports. |
-| PF_IMPORT_IG_PERM_MIN_FOLLOWER_COUNT| "0"                               | Minimum Instagram follower count to allow imports. |
-| PF_IMPORT_IG_PERM_ONLY_USER_IDS     | ""| List of user IDs allowed for Instagram imports. |
-| MEDIA_EXIF_DATABASE                 | "false"                           | Enable EXIF database for media. |
-| IMAGE_DRIVER                        | "gd"                              | Image processing driver: gd or imagick. |
-| TRUST_PROXIES                       | "*"                               | List of trusted proxy IP addresses. |
-| CACHE_DRIVER                        | "redis"                           | Default cache driver (e.g., file, redis). |
-| CACHE_PREFIX                        | "${APP_NAME}_cache"               | Cache prefix, defaults to APP_NAME. |
-| BROADCAST_DRIVER                    | "redis"                           | Default broadcaster for events (e.g., redis, pusher). |
-| RESTRICT_HTML_TYPES                 | "true"                            | Restrict allowed HTML types. |
-| PASSPORT_PRIVATE_KEY                | ""| Passport private key for secure access tokens. |
-| PASSPORT_PUBLIC_KEY                 | ""| Passport public key for secure access tokens. |
+| OAUTH_ENABLED                       | "true"                           | Enable oAuth support, required for mobile/3rd party apps |
+
 
 ### Curated Onboarding
 | .env key      | Default |  Description |
@@ -107,6 +106,19 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | INSTANCE_CUR_REG_NOTIFY_ADMIN_ON_VERIFY             | "false"               | Send email reports on 'verify'. |
 | INSTANCE_CUR_REG_NOTIFY_ADMIN_ON_VERIFY_BUNDLE      | "false"               | Send admin notifications on verify bundle.                           |
 | INSTANCE_CUR_REG_NOTIFY_ADMIN_ON_USER_RESPONSE      | "false"               | Send notification on user response.   |
+
+### Instagram Import Settings
+| .env key      | Default |  Description |
+| ------------- | :-----------: | :----: |
+| PF_IMPORT_FROM_INSTAGRAM            | "true"                            | Allow importing posts from Instagram. |
+| PF_IMPORT_IG_MAX_POSTS              | "1000"                            | Maximum number of posts to import from Instagram. |
+| PF_IMPORT_IG_MAX_ATTEMPTS           | "-1"                              | Maximum number of Instagram import attempts. |
+| PF_IMPORT_IG_ALLOW_VIDEO_POSTS      | "true"                            | Allow importing video posts from Instagram. |
+| PF_IMPORT_IG_PERM_ADMIN_ONLY        | "false"                           | Limit Instagram imports to admin accounts only. |
+| PF_IMPORT_IG_PERM_ADMIN_FOLLOWS_ONLY | "false"                         | Limit Instagram imports to admin-followed accounts. |
+| PF_IMPORT_IG_PERM_MIN_ACCOUNT_AGE   | "1"                               | Minimum Instagram account age to allow imports. |
+| PF_IMPORT_IG_PERM_MIN_FOLLOWER_COUNT| "0"                               | Minimum Instagram follower count to allow imports. |
+| PF_IMPORT_IG_PERM_ONLY_USER_IDS     | ""| List of user IDs allowed for Instagram imports. |
 
 ### Database Settings
 | .env key      | Default |  Description |
@@ -137,7 +149,7 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | MAIL_ENCRYPTION  | "tls"                 | Encryption protocol for SMTP email delivery.                         |
 | INSTANCE_REPORTS_EMAIL_ENABLED | false | Send a report email to the admin account for new autospam/reports | Boolean |
 | INSTANCE_REPORTS_EMAIL_ADDRESSES | NULL | A comma separated list of email addresses to deliver admin reports to | String |
-| INSTANCE_REPORTS_EMAIL_AUTOSPAM | false | Enable autospam reports (require INSTANCE_REPORTS_EMAIL_ENABLED) | Boolean |
+| INSTANCE_REPORTS_EMAIL_AUTOSPAM | false | Enable autospam reports (requires INSTANCE_REPORTS_EMAIL_ENABLED) | Boolean |
 
 ### Redis Settings
 | .env key      | Default |  Description |
@@ -209,7 +221,7 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | LOG_STDERR_FORMATTER | ""                    | Custom formatter for stderr log. |
 | LOG_SLACK_WEBHOOK_URL| ""                    | Slack webhook URL for sending logs.  |
 
-### Queue Settings
+### Queue/Cache Settings
 | .env key      | Default |  Description |
 | ------------- | :-----------: | :----: |
 | QUEUE_DRIVER    | "redis"               | Queue driver to use (e.g., sync, database, sqs, redis, etc.).       |
@@ -218,6 +230,9 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | SQS_PREFIX  | ""  | Prefix for AWS SQS.   |
 | SQS_QUEUE      | "your-queue-name"     | AWS SQS queue name.  |
 | SQS_REGION    | "us-east-1"           | AWS SQS region. |
+| CACHE_DRIVER                        | "redis"                           | Default cache driver (e.g., file, redis). |
+| CACHE_PREFIX                        | "${APP_NAME}_cache"               | Cache prefix, defaults to APP_NAME. |
+| BROADCAST_DRIVER                    | "redis"                           | Default broadcaster for events (e.g., redis, pusher). |
 
 ### Session Settings
 | .env key      | Default |  Description |
