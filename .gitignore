@@ -3,6 +3,7 @@
 /src/node/shared.ts
 *.log
 *.tgz
+.direnv
 .DS_Store
 .idea
 .temp
