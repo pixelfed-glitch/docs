@@ -36,9 +36,8 @@ export default defineConfig({
       {
         text: '',
         items: [
-          { text: 'Introduction', link: '/project/introduction' },
-          { text: 'Community', link: '/project/community' },
-        ]
+          { text: 'Introduction', link: '/project/introduction' }
+                ]
       },
       {
         text: 'Running Pixelfed',
