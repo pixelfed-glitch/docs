@@ -34,9 +34,9 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '',
+        text: 'The Project',
         items: [
-          { text: 'Introduction', link: '/project/introduction' },
+          { text: 'Why Pixelfed Glitch?', link: '/project/why_pixelfed_glitch' },
           { text: 'Code of Conduct', link: '/CODE_OF_CONDUCT' },
           { text: 'Community', link: '/project/community' },
           { text: 'Documentation', link: '/project/documentation' },

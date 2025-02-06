@@ -3,10 +3,13 @@
 layout: home
 
 hero:
-  name: "Pixelfed Glitch Docs"
+  name: "Pixelfed Glitch"
   text: ""
-  tagline: "The Pixelfed Glitch documentation"
+  tagline: "This is a fork of Pixelfed, the media sharing ActivityPub platform"
   actions:
+    - theme: brand
+      text: Why Pixelfed Glitch?
+      link: /project/why_pixelfed_glitch
     - theme: brand
       text: Getting Started
       link: /running-pixelfed/

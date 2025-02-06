@@ -1,8 +1,8 @@
-# This is Pixelfed Glitch
+# Why Pixelfed Glitch ?
 
-## We aim at delivering a fork of the official Pixelfed ActivityPub platform.
+## Pixelfed Glitch is a fork of the official Pixelfed ActivityPub platform.
 
-We aim at making a community driven project with a flatter governance,
+We aim at delivering a community-driven project with a flatter governance,
 to accept more feedback and submissions from the community,
 and to give better features and fixes, without breaking compatibility with upstream.
 

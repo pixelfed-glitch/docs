@@ -77,6 +77,10 @@ You can choose one of three [supported database drivers for Laravel 9](https://l
 - MariaDB (10.3+)
 - PostgreSQL (10+)
 
+::: warning
+As of now, support for PostgreSQL is very unstable. We do recommend using MySQL or MariaDB
+:::
+
 You will need to create a database and grant permission to an SQL user identified by a password. To do this with MySQL or MariaDB, do the following:
 
 ```sh
