@@ -38,9 +38,16 @@ You can set the environment variable `DOCKER_APP_ENTRYPOINT_DEBUG=1` to show the
 
 ### Disabling `ENTRYPOINT` or individual scripts
 
-To disable the entire `ENTRYPOINT` you can set the variable `ENTRYPOINT_SKIP=1`.
+To disable the entire `ENTRYPOINT` you can set the variable `ENTRYPOINT_SKIP_SCRIPTS=any`.
 
 To disable individual `ENTRYPOINT` scripts, you can add the filename to the space (`" "`) separated variable `ENTRYPOINT_SKIP_SCRIPTS`. (example: `ENTRYPOINT_SKIP_SCRIPTS="10-storage.sh 30-cache.sh"`)
+
+::: warning
+Be weary that the `web` container will still need to run `04-defaults.envsh` and `05-templating.sh` at the bare minimum, to have all files and variables ready.
+
+You can run those like this :
+`ENTRYPOINT_SKIP_SCRIPTS="04-defaults.envsh 05-templating.sh"`
+:::
 
 ## Override anything and everything
 

@@ -16,26 +16,40 @@ You can change the installation path; update the commands below to fit your setu
 ### Create the directory
 
 ```bash
-mkdir -p /data
+mkdir -p pixelfed-glitch
 ```
 
-### Clone the Pixelfed project
+### Prepare your docker environment
+
+If you want to run the prebuilt images, you can copy the docker compose relevant files :
+- [`docker-compose.yml`](https://raw.githubusercontent.com/pixelfed-glitch/pixelfed/develop/docker-compose.yml), or the simpler version 
+  [`docker-compose.simple.yml`](https://raw.githubusercontent.com/pixelfed-glitch/pixelfed/develop/docker-compose.simple.yml)
+- the environment variable file [`.env.docker`](https://raw.githubusercontent.com/pixelfed-glitch/pixelfed/develop/.env.docker)
+- additionally, you can fetch the content of the `scripts` folder for convenient scripts.
+you can fetch the folder using
+[download-directory.github.io](https://download-directory.github.io/?url=https://github.com/pixelfed-glitch/pixelfed/tree/develop/scripts).
+
+  Make sure to unzip it in a `scripts` folder.
+
+Alternatively, especially if you want to rebuild your own images, you can clone the Pixelfed Glitch project :
 
 ```bash
-git clone https://github.com/pixelfed-glitch/pixelfed.git /data/pixelfed
+git clone https://github.com/pixelfed-glitch/pixelfed.git pixelfed-glitch
 ```
+
+If you plan on rebuilding the docker images, you will then be using the `docker-compose.build.yml` file.
 
 ### Change directory
 
 ```bash
-cd /data/pixelfed
+cd pixelfed-glitch
 ```
 
 ## Configuring your site
 
 ### Copy the example file
 
-Pixelfed contains a default configuration file (`.env.docker`) you should use as a starter; however, before editing anything, make a copy of it and put it in the *right* place (`.env`).
+Pixelfed Glitch contains a default configuration file (`.env.docker`) you should use as a starter; however, before editing anything, make a copy of it and put it in the *right* place (`.env`).
 
 Run the following command to copy the file:
 
@@ -43,9 +57,13 @@ Run the following command to copy the file:
 cp .env.docker .env
 ```
 
-### Modify config file
+### Modify the docker compose file
 
-The configuration file is *quite* long, but the good news is that you can ignore *most* of it; most of the *server-specific* settings are configured for you out of the box.
+:::tip
+There is three versions of the `docker-compose.yml` file. Independently on the one you want to use, make sure to rename it to `docker-compose.yml`, or append `-f <nameofyourfile>` to your docker compose command.
+:::
+
+The configuration file can be *quite* long, but the good news is that you can ignore *most* of it; most of the *server-specific* settings are configured for you out of the box.
 
 The minimum required settings you **must** change is:
 
@@ -55,7 +73,7 @@ The minimum required settings you **must** change is:
 * (optional) `MAIL_MAILER` and related `MAIL_*` settings if you plan to use an [E-mail/SMTP provider](prerequisites.md#smtp-provider-optional) - See [E-mail variables documentation](/running-pixelfed/native/installation.md#email-variables).
 * (optional) `PF_ENABLE_CLOUD` / `FILESYSTEM_CLOUD` if you plan to use an [Object Storage provider](prerequisites.md#object-storage-optional).
 
-See the [`Configure environment variables`](https://docs.pixelfed.org/running-pixelfed/installation/#app-variables) documentation for details!
+See the [Configure environment variables](/running-pixelfed/native/installation.md#app-variables) and [Configuration](/configuration/configuration) documentation for details!
 
 You need to mainly focus on the following sections.
 
@@ -87,6 +105,34 @@ You can use the CLI flag `--follow` to continue to see log output from the conta
 You can combine `--tail=100` and `--follow` like this `docker compose logs --tail=100 --follow`.
 
 If you only care about specific containers, you can add them to the end of the command like this `docker-compose logs web worker proxy.`
+
+### First login to Pixelfed Glitch
+
+You successfully launched Pixelfed Glitch. Now you need an account !
+
+For that, you can run :
+
+```shell
+docker compose exec -u www-data web php artisan user:create
+```
+
+You can replace `exec` with `run` if no `web` instance is running.
+
+To make your user administrator of the instance:
+
+```shell
+# replace `<usernickname>` with the user nickname
+docker compose exec -u www-data web php artisan user:admin <usernickname>
+```
+
+At this point, you might still have issues with mail setup.
+
+If you want to manually verify the users email address:
+
+```shell
+# replace `<usernickname>` with the user nickname
+docker compose exec -u www-data web php artisan user:verifyemail <usernickname>
+```
 
 ### Done
 
