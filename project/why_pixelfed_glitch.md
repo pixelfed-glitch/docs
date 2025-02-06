@@ -21,13 +21,13 @@ and to give better features and fixes, without breaking compatibility with upstr
 
 - Better separation between App and API
 - UI fixes / revamp
-- Fixes with regression tests on database
-- Long awaited features, like a better federation feed with relays
+- Fixes with regression tests on database access
+- Long awaited features, like a better Federated Feed with Relays
 
 ## If you like our project, please :
 
 - Follow us on [@PixelfedGlitch@hachyderm.io](https://hachyderm.io/@PixelfedGlitch)
-- Talk about Pixlefed Glitch around you in Fediverse circles
-- Join us on our [Discord](https://discord.gg/HuZc6jr25X)
+- Talk about Pixelfed Glitch on the Fediverse and with devs
+- Come talk with us on our [Discord](https://discord.gg/HuZc6jr25X)
 - Contribute to our project on [GitHub](https://github.com/pixelfed-glitch/pixelfed)
-- Join us ! We are nice people :3
+- Join the team! We are nice people :3
