@@ -22,7 +22,7 @@ export default defineConfig({
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'pixelfed', link: 'https://pixelfed-glitch.github.io' },
+      { text: 'Pixelfed Glitch', link: 'https://pixelfed-glitch.github.io/docs' },
       { text: 'Support', link: 'https://github.com/pixelfed-glitch/pixelfed/discussions' },
     ],
 
@@ -36,8 +36,11 @@ export default defineConfig({
       {
         text: '',
         items: [
-          { text: 'Introduction', link: '/project/introduction' }
-                ]
+          { text: 'Introduction', link: '/project/introduction' },
+          { text: 'Code of Conduct', link: '/CODE_OF_CONDUCT' },
+          { text: 'Community', link: '/project/community' },
+          { text: 'Documentation', link: '/project/documentation' },
+        ]
       },
       {
         text: 'Running Pixelfed',
@@ -71,7 +74,7 @@ export default defineConfig({
   {
     text: "",
     items: [
-      { text: 'Configuration', link: '/running-pixelfed/native/configuration' }
+      { text: 'Configuration', link: 'configuration/configuration' }
 ],
 },
       {
@@ -94,6 +97,7 @@ export default defineConfig({
     },
   },
   head: [
+    ['link', { rel: "stylesheet", href: "/custom.css"}],
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/favicon.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/assets/favicon.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/assets/favicon.png"}],

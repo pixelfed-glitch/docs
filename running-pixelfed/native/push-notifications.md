@@ -40,7 +40,7 @@ To enable push notifications on your Pixelfed instance, you must obtain manual a
 
 3) **Receive Your API Key**: Once approved, you will be provided with a unique API key specific to your instance.
 
-4) **Configure Your Instance**: Update your instance settings to include the provided API key. Refer to the [Configuration](#configuration) docs.
+4) **Configure Your Instance**: Update your instance settings to include the provided API key. Refer to the [Configuration](/configuration/configuration) docs.
 
 ## Configuration
 
@@ -70,7 +70,7 @@ php artisan horizon:terminate
 
 For any questions or to begin the approval process for push notifications on your instance, please reach out:
 
-- Email: hello@pixelfed.org
-- Website: https://pixelfed.org
+- Email: pixelfed.glitch@balamb.fr
+- Website: https://pixelfed-glitch.github.io/docs
 
-We appreciate your cooperation as we work towards supporting third-party apps while maintaining a secure and efficient network for all Pixelfed users.
+We appreciate your cooperation as we work towards supporting third-party apps while maintaining a secure and efficient network for all Pixelfed Glitch users.

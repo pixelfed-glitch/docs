@@ -15,9 +15,9 @@ hero:
       link: /spec/ActivityPub.html
     - theme: alt
       text: Latest Pixelfed Glitch Docs
-      link: https://pixelfed-glitch.github.io/docs/
+      link: https://pixelfed-glitch.github.io/docs
     - theme: alt
-      text: Pixelfed Official Docs
+      text: Upstream Official Docs
       link: https://docs.pixelfed.org
 ---
 
