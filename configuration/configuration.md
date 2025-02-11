@@ -124,7 +124,7 @@ This setup allows Pixelfed to manage its settings effectively across different e
 | .env key      | Default |  Description |
 | ------------- | :-----------: | :----: |
 | DB_VERSION      | "11.4"                | Database version to use (as Docker tag).                              |
-| DB_CONNECTION   | "mysql"               | Default database connection type. Possible values: sqlite, mysql, pgsql, sqlsrv.                          |
+| DB_CONNECTION   | "mariadb"               | Default database connection type. Possible values: sqlite, mysql, mariadb, pgsql, sqlsrv.                          |
 | DB_HOST         | "db"                  | Host for the database server.    |
 | DB_USERNAME     | "pixelfed"            | Database username.               |
 | DB_PASSWORD     | "__CHANGE_ME__"       | Database password (make sure it’s secure).                            |

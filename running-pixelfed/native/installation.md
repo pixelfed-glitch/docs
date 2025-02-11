@@ -71,7 +71,17 @@ By default, the values provided will allow connecting to MySQL or MariaDB over t
 
 If you are running Postgres:
 
-- Set `DB_CONNECTION` to `pgsql` instead of `mysql`.
+- Set `DB_CONNECTION` to `pgsql`.
+
+If you are running MariaDB:
+
+- Set `DB_CONNECTION` to `mariadb`.
+
+:::tip
+`mysql` option will work with MariaDB but is not optimal.
+
+Please note though that Laravel 11 or less requires a `mysql` cli tool or alias for MariaDB. This will be fixed in Laravel 12 (See issue [laravel/framework#52843](https://github.com/laravel/framework/issues/52843#issuecomment-2359360404))
+:::
 
 If you are running your SQL server on a different machine or port:
 
